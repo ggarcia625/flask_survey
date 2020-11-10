@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1> Customer Satisfaction Survey</h1>
+<p>
+Please fill out a survey about your experience with us.
+</p>
+
+<form action="/questions/0">
+  <button>Start!</button>
+</form>
+<style>
+  body {
+      text-align: center;
+      margin: 0;
+      min-width: 250px;
+  }
+  </style>
+
+{% endblock %}

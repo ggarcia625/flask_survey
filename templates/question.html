@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1> {{ question.question }} </h1>
+
+<form action="/answer" method="POST">
+  {% for i in range(question.choices|length) %}  
+  <p>
+      <input
+          type="radio"
+          name="answer"
+          value="{{i}}">
+      {{question.choices[i]}}
+    </p>
+    {% endfor %}
+  <button>Continue</button>
+  
+</form>
+
+{% endblock %}
